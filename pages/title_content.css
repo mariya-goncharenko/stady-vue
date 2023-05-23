@@ -1,0 +1,30 @@
+.titel-content {
+    margin: 40px 15px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+  }
+  .titel-content__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25px;
+    color: #303030;
+  }
+
+  .titel-content__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration-line: none;
+    color: #e21b3c;
+  }
+
+  .titel-content__link:hover {
+    text-decoration-line: underline;
+    color: #e21b3c;
+  }

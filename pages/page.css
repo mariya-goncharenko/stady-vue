@@ -1,0 +1,11 @@
+.page {
+    max-width: 1310px;
+    min-width: 440px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .bloks{
+    margin: 40px auto;
+    padding: 0;
+  }

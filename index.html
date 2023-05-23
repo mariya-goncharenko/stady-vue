@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная</title>
+    <meta name="description" content="Первая страница" />
+    <meta name="keywords" content="Farmani.Главная" />
+    <meta name="author" content="Мария Гончаренко" />
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./pages/page.css" />
+    <link rel="stylesheet" href="./pages/title_content.css" />
+    <link rel="stylesheet" href="./pages/recomendation.css" />
+    <link rel="stylesheet" href="./pages/actions.css" />
+    <link rel="stylesheet" href="./pages/popular.css" />
+  </head>
+
+  <body class="root">
+    <div class="page">
+      <header></header>
+      <main class="main">
+        <section class="first-scrin">
+          <div class="first-scrin__baner first-scrin__baner_big"></div>
+          <div class="first-scrin__baner first-scrin__baner_min"></div>
+          <div class="first-scrin__baner first-scrin__baner_min"></div>
+        </section>
+
+        <section class="process bloks"></section>
+        <section class="prod bloks"></section>
+        <section class="prod bloks"></section>
+
+        <section class="shelves bloks" id="shelves">
+          <div class="titel-content">
+            <h2 class="titel-content__title">По полочкам</h2>
+          </div>
+
+          <div class="scrolling-wrapper">
+            <div class="cards">
+              <ul class="cards__list" v-for="item in cards">
+                <li class="card">
+                  <img class="card__img" :src="item.img" :alt="item.name" />
+                  <h3 class="card__title">{{ item.name }}</h3>
+                  <p class="card__text">{{ item.provider }}</p>
+                  <p class="card__text">{{ item.country }}</p>
+                  <p class="card__price">{{ item.price }}</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="recommendations bloks" id="recommendations">
+          <div class="titel-content">
+            <h2 class="titel-content__title">Рекомендуем</h2>
+          </div>
+
+          <div class="scrolling-wrapper">
+            <div class="cards">
+              <ul class="cards__list" v-for="item in cards">
+                <li class="card">
+                  <img class="card__img" :src="item.img" :alt="item.name" />
+                  <h3 class="card__title">{{ item.name }}</h3>
+                  <p class="card__text">{{ item.provider }}</p>
+                  <p class="card__text">{{ item.country }}</p>
+                  <p class="card__price">{{ item.price }}</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="action bloks" id="action">
+          <div class="titel-content">
+            <h2 class="titel-content__title">Акции и распродажи</h2>
+            <a href="#" class="titel-content__link">Все акции</a>
+          </div>
+
+          <div class="action__cards">
+            <ul class="action__list" v-for="item in actions">
+              <li class="action__card">
+                <img
+                  class="action__card-img"
+                  :src="item.img"
+                  :alt="item.name"
+                />
+                <p class="action__card-text">{{ item.data }}</p>
+                <h3 class="action__card-subtitle">{{ item.name }}</h3>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="popular bloks" id="popular">
+          <div class="titel-content">
+            <h2 class="titel-content__title">Популярные категории</h2>
+            <a href="#" class="titel-content__link">Весь каталог</a>
+          </div>
+
+          <div class="popular__nav-lists">
+            <nav class="popular__nav-list" id="supplements">
+              <h3 class="popular__subtitle">Лекарства и БАДы</h3>
+              <ul class="popular__list" v-for="item in supplements">
+                <li class="popular__list-item">{{ item.name }}</li>
+              </ul>
+              <a href="" class="popular__link">Смотреть все</a>
+            </nav>
+
+            <nav class="popular__nav-list" id="cosmetics">
+              <h3 class="popular__subtitle">Лечебная косметика</h3>
+              <ul class="popular__list" v-for="item in cosmetics">
+                <li class="popular__list-item">{{ item.name }}</li>
+              </ul>
+              <a href="" class="popular__link">Смотреть все</a>
+            </nav>
+
+            <nav class="popular__nav-list" id="hygiene">
+              <h3 class="popular__subtitle">Косметика и гигиена</h3>
+              <ul class="popular__list" v-for="item in hygiene">
+                <li class="popular__list-item">{{ item.name }}</li>
+              </ul>
+              <a href="" class="popular__link">Смотреть все</a>
+            </nav>
+
+            <nav class="popular__nav-list" id="diagnostics">
+              <h3 class="popular__subtitle">Мед. приборы и диагностика</h3>
+              <ul class="popular__list" v-for="item in diagnostics">
+                <li class="popular__list-item">{{ item.name }}</li>
+              </ul>
+              <a href="" class="popular__link">Смотреть все</a>
+            </nav>
+          </div>
+        </section>
+      </main>
+      <footer></footer>
+    </div>
+    <!-- Подключение скриптов -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <script src="/vendor/bootstrap/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="/vendor/bootstrap/js/popper.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="/js/index.js"></script>
+  </body>
+</html>
