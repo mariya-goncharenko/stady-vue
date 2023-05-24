@@ -9,10 +9,16 @@
     <meta name="author" content="Мария Гончаренко" />
     <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./pages/page.css" />
+    <link rel="stylesheet" href="./pages/steps.css" />
     <link rel="stylesheet" href="./pages/title_content.css" />
     <link rel="stylesheet" href="./pages/recomendation.css" />
     <link rel="stylesheet" href="./pages/actions.css" />
     <link rel="stylesheet" href="./pages/popular.css" />
+    <link rel="stylesheet" href="./pages/app.css" />
+    <link rel="stylesheet" href="./pages/health.css" />
+    
+    <link rel="stylesheet" href="./pages/text-blok.css" />
+
   </head>
 
   <body class="root">
@@ -26,8 +32,49 @@
         </section>
 
         <section class="process bloks"></section>
-        <section class="prod bloks"></section>
-        <section class="prod bloks"></section>
+
+        <section class="steps bloks">
+          <div class="steps__cantainer">
+            <div class="steps__item">
+              <img
+                src="./img/iconBasket.svg"
+                alt="Корзина"
+                class="steps__img"
+              />
+              <p class="steps__text">Добавьте товары<br />в корзину</p>
+            </div>
+            <img src="./img/iconArrowRed.svg" alt="" class="steps__arrow" />
+
+            <div class="steps__item">
+              <img
+                src="./img/iconBasket.svg"
+                alt="Оформление"
+                class="steps__img"
+              />
+              <p class="steps__text">Оформите заказ<br />на сайте</p>
+            </div>
+            <img src="./img/iconArrowRed.svg" alt="" class="steps__arrow" />
+
+            <div class="steps__item">
+              <img
+                src="./img/iconSms.svg"
+                alt="Готовность"
+                class="steps__img"
+              />
+              <p class="steps__text">Получите уведомление<br />о готовности</p>
+            </div>
+            <img src="./img/iconArrowRed.svg" alt="" class="steps__arrow" />
+
+            <div class="steps__item">
+              <img
+                src="./img/iconPlace.png"
+                alt="Получение"
+                class="steps__img"
+              />
+              <p class="steps__text">Получите<br />заказ</p>
+            </div>
+          </div>
+        </section>
 
         <section class="shelves bloks" id="shelves">
           <div class="titel-content">
@@ -75,18 +122,20 @@
             <a href="#" class="titel-content__link">Все акции</a>
           </div>
 
-          <div class="action__cards">
-            <ul class="action__list" v-for="item in actions">
-              <li class="action__card">
-                <img
-                  class="action__card-img"
-                  :src="item.img"
-                  :alt="item.name"
-                />
-                <p class="action__card-text">{{ item.data }}</p>
-                <h3 class="action__card-subtitle">{{ item.name }}</h3>
-              </li>
-            </ul>
+          <div class="scrolling-wrapper">
+            <div class="action__cards">
+              <ul class="action__list" v-for="item in actions">
+                <li class="action__card">
+                  <img
+                    class="action__card-img"
+                    :src="item.img"
+                    :alt="item.name"
+                  />
+                  <p class="action__card-text">{{ item.data }}</p>
+                  <h3 class="action__card-subtitle">{{ item.name }}</h3>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -129,6 +178,156 @@
               <a href="" class="popular__link">Смотреть все</a>
             </nav>
           </div>
+        </section>
+
+        <section class="app bloks">
+          <div class="app__container">
+            <div class="app__left">
+              <h2 class="app__title">Мобильное приложение АПТЕКИ FARMANI</h2>
+              <p class="app__subtitle">
+                <span class="app__col">500</span>
+                <span class="app__bon">приветственных бонусов</span> за
+                авторизацию!
+              </p>
+              <div>
+                <button class="btn">Скачать для iPhone</button>
+                <button class="btn">Скачать для Android</button>
+              </div>
+            </div>
+
+            <div class="app__right">
+              <img class="app__img" src="./img/imgApp.png" alt="" />
+              <p class="app__qr">Наведите<br />телефон<br />на QR-код</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="health bloks" id="popular">
+          <div class="health__left">
+            <div class="health__card-big">
+              <div class="health__fon">
+                <p class="health__text-min">Профилактика и лечение</p>
+                <h2 class="health__title-min">Какие бывают антибиотики?</h2>
+                <p class="health__text">
+                  Антибиотики– это группа препаратов, которые используются в
+                  лечении бактериальных инфекций. Бактерии – это живые
+                  микроорганизмы, которые проникнув в организм человека,
+                  начинают активную жизнедеятельность и размножение. Эффект
+                  антибактериальной терапии заключается в непосредственном
+                  уничтожении возбудителя, а также замедлении размножения
+                  болезнетворных микроорганизмов.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="health__right">
+            <div class="health__card-mini">
+              <div class="health__fon-min">
+                <p class="health__text-min">Безопасность и здоровье</p>
+                <h2 class="health__title-min">Токсины - маленькие враги, большие проблемы</h2>
+              </div>
+            </div>
+            <div class="health__card-mini">
+              <div class="health__fon-min">
+                <p class="health__text-min">Безопасность и здоровье</p>
+                <h2 class="health__title-min">Токсины - маленькие враги, большие проблемы</h2>
+              </div>
+            </div>
+            <div class="health__card-mini">
+              <div class="health__fon-min">
+                <p class="health__text-min">Безопасность и здоровье</p>
+                <h2 class="health__title-min">Токсины - маленькие враги, большие проблемы</h2>
+              </div>
+            </div>
+            <div class="health__card-mini">
+              <div class="health__fon-min">
+                <p class="health__text-min">Безопасность и здоровье</p>
+                <h2 class="health__title-min">Токсины - маленькие враги, большие проблемы</h2>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="text-blok bloks">
+          <h2 class="text-blok__title">
+            Сеть аптек «Farmani» - Нижний Новгород
+          </h2>
+
+          <h3 class="text-blok__subtitle">
+            Аптеки сети «Farmani» на страже вашего здоровья
+          </h3>
+
+          <p class="text-blok__text">
+            Выбор и покупка лекарственных препаратов, биологически активных
+            добавок, другой аптечной продукции еще никогда не были такими
+            простыми. Нижегородская сеть аптек «Farmani» предлагает бронирование
+            и заказ товаров с доставкой на дом или самовывозом из ближайших
+            пунктов выдачи. В каталоге позиции только надежных производителей,
+            которым реально доверять. На официальном сайте есть все условия
+            приобретения лекарств, изделий медицинского назначения,
+            лекарственных трав, БАДов, товаров категории «Мать и малыш».
+            Разумные цены, первоклассное обслуживание, развернутую информацию по
+            любому вопросу мы гарантируем.
+          </p>
+          <h3 class="text-blok__subtitle">Все необходимое в одной аптеке</h3>
+          <p class="text-blok__text">
+            В каталоге аптек Нижнего Новгорода более 100000 наименований. Здесь
+            вы найдете широкий список лекарств (от активированного угля до
+            редких препаратов), детское питание, косметику для красоты/здоровья,
+            медицинские приборы домашнего использования, многое другое. Мы
+            следим, чтобы на складе и в каждой аптеке всегда присутствовали все
+            предлагаемые товары. <br />
+            Для еще большей экономии мы предлагаем заказ интересующих товаров со
+            склада. Сделать это можно по телефону, лично у провизора или на
+            сайте интернет аптеки. Забрать заказ по низкой цене можно в одном из
+            аптечных пунктов. Интерактивная карта реальных адресов в вашем
+            распоряжении.
+          </p>
+          <h3 class="text-blok__subtitle">Удаленные покупки с комфортом</h3>
+          <p class="text-blok__text">
+            Желание клиента – для нас закон, а его комфорт – одна из основных
+            целей.Аптеки нижегородской сети оборудованы с использованием
+            новейших технологий, что облегчает взаимодействие с покупателями,
+            повышает качество их обслуживания. Мы предлагаем:
+          </p>
+          <ul>
+            <li>
+              консультативную помощь в выборе лекарственных препаратов, другой
+              аптечной продукции;
+            </li>
+            <li>
+              строгий контроль-фальсификат, предоставление только
+              сертифицированных товаров в ассортименте;
+            </li>
+            <li>
+              разработку/внедрение программ лояльности для постоянных клиентов,
+              которые помогут экономить, покупать лекарства по сниженной цене.
+            </li>
+          </ul>
+          <p class="text-blok__text">
+            Для экономии времени, комфорта, защиты здоровья мы предлагаем
+            оформлять заказы на официальном сайте сети, бронировать их, а потом
+            забирать в точке выдачи, адрес которой вы выбираете сами. Кроме
+            сайта «Farmani» купить лекарства через интернет всего в несколько
+            кликов поможет наше фирменное мобильное приложения для Android, iOS.
+          </p>
+
+          <h3 class="text-blok__subtitle">
+            Наша аптека – свобода вашего выбора
+          </h3>
+
+          <p class="text-blok__text">
+            Работая в интересах клиента, мы не навязываем вам свой выбор. Мы
+            постоянно расширяем товарную матрицу, предоставляя исключительно
+            качественную и сертифицированную продукцию. У нас нет предпочтений в
+            производителях, поэтому наши клиенты вольны покупать те препараты,
+            которые их интересуют. Мы делаем все, чтобы цена каждой позиции
+            соответствовала ее качеству, но оставалась при этом доступной для
+            каждого.<br />
+            Впереди нас ждет еще множество свершений, а уже сегодня мы
+            приглашаем вас в любую из наших аптек! Давайте дружить!
+          </p>
         </section>
       </main>
       <footer></footer>

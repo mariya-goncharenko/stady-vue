@@ -2,23 +2,9 @@
   margin: 30px 15px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: start;
-  row-gap: 40px;
+  flex-wrap: no-wrap;
   column-gap: 20px;
-}
-
-@media screen and (max-width: 1267px) {
-  .action__cards {
-    justify-content: space-around;
-  }
-}
-
-@media screen and (max-width: 625px) {
-  .action__cards{
-    flex-direction: column;
-  }
+  justify-content: start;
 }
 
 .action__list {

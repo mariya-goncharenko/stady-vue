@@ -1,0 +1,30 @@
+.text-blok {
+    margin: 40px 15px 0;
+    margin-top: 40px;
+    padding: 0;
+    gap: 40px;
+  }
+  .text-blok__title {
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25px;
+    color: #303030;
+  }
+
+  .text-blok__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: #303030;
+  }
+
+  .text-blok__subtitle {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #303030;
+  }
