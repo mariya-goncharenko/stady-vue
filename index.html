@@ -7,6 +7,8 @@
     <meta name="description" content="Первая страница" />
     <meta name="keywords" content="Farmani.Главная" />
     <meta name="author" content="Мария Гончаренко" />
+    <link rel="stylesheet" href="./vendor/fonts/myriad-pro.css" />
+    <link rel="stylesheet" href="./vendor/normalize.css" />
     <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./pages/page.css" />
     <link rel="stylesheet" href="./pages/steps.css" />
@@ -16,9 +18,10 @@
     <link rel="stylesheet" href="./pages/popular.css" />
     <link rel="stylesheet" href="./pages/app.css" />
     <link rel="stylesheet" href="./pages/health.css" />
-    
     <link rel="stylesheet" href="./pages/text-blok.css" />
-
+    <link rel="stylesheet" href="./pages/nav-footer.css" />
+    <link rel="stylesheet" href="./pages/copyright-footer.css" />
+    <link rel="stylesheet" href="./pages/bottom-footer.css" />
   </head>
 
   <body class="root">
@@ -225,25 +228,33 @@
             <div class="health__card-mini">
               <div class="health__fon-min">
                 <p class="health__text-min">Безопасность и здоровье</p>
-                <h2 class="health__title-min">Токсины - маленькие враги, большие проблемы</h2>
+                <h2 class="health__title-min">
+                  Токсины - маленькие враги, большие проблемы
+                </h2>
               </div>
             </div>
             <div class="health__card-mini">
               <div class="health__fon-min">
                 <p class="health__text-min">Безопасность и здоровье</p>
-                <h2 class="health__title-min">Токсины - маленькие враги, большие проблемы</h2>
+                <h2 class="health__title-min">
+                  Токсины - маленькие враги, большие проблемы
+                </h2>
               </div>
             </div>
             <div class="health__card-mini">
               <div class="health__fon-min">
                 <p class="health__text-min">Безопасность и здоровье</p>
-                <h2 class="health__title-min">Токсины - маленькие враги, большие проблемы</h2>
+                <h2 class="health__title-min">
+                  Токсины - маленькие враги, большие проблемы
+                </h2>
               </div>
             </div>
             <div class="health__card-mini">
               <div class="health__fon-min">
                 <p class="health__text-min">Безопасность и здоровье</p>
-                <h2 class="health__title-min">Токсины - маленькие враги, большие проблемы</h2>
+                <h2 class="health__title-min">
+                  Токсины - маленькие враги, большие проблемы
+                </h2>
               </div>
             </div>
           </div>
@@ -330,8 +341,83 @@
           </p>
         </section>
       </main>
-      <footer></footer>
+
+      <footer>
+        <section class="email-blok bloks"></section>
+        <section class="nav-footer bloks" id="nav-footer">
+          <div class="nav-footer__left">
+            <nav class="nav-footer__navigate">
+              <h2 class="nav-footer__titel">Farmani</h2>
+              <ul v-for="item in farmani" class="nav-footer__lists">
+                <li class="nav-footer__list">{{ item.name }}</li>
+              </ul>
+            </nav>
+            <nav class="nav-footer__navigate">
+              <h2 class="nav-footer__titel">Товары</h2>
+              <ul v-for="item in products" class="nav-footer__lists">
+                <li class="nav-footer__list">{{ item.name }}</li>
+              </ul>
+            </nav>
+            <nav class="nav-footer__navigate">
+              <h2 class="nav-footer__titel">Документы</h2>
+              <ul v-for="item in documents" class="nav-footer__lists">
+                <li class="nav-footer__list">{{ item.name }}</li>
+              </ul>
+            </nav>
+            <nav class="nav-footer__navigate">
+              <h2 class="nav-footer__titel">Покупателям</h2>
+              <ul v-for="item in customer" class="nav-footer__lists">
+                <li class="nav-footer__list">{{ item.name }}</li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="nav-footer__right">
+            <h3 class="nav-footer__tel">8 (831) 220-00-09</h3>
+            <p class="nav-footer__day">пн-пт 9.00-18.00</p>
+            <div class="nav-footer__webs">
+              <a class="nav-footer__web nav-footer__web_tg" href=""></a>
+              <a class="nav-footer__web nav-footer__web_vk" href=""></a>
+              <a class="nav-footer__web nav-footer__web_ok" href=""></a>
+            <div>
+          </div>
+        </section>
+        <section class="copyright-footer bloks">
+          <div class="copyright-footer__left">
+            <ul class="copyright-footer__lists">
+              <li class="copyright-footer__list">2022 © Аптеки Farmani</li>
+              <li class="copyright-footer__list">
+                ООО "Нижегородская аптечная сеть", лицензия Ло-52-02-002723 от
+                27.02.2020
+              </li>
+              <li class="copyright-footer__list">ОГРН 1155260005526, ИНН 5260408672</li>
+              <li class="copyright-footer__list">603009, г.Н.Новгород, проспект Гагарина, д.37Д</li>
+              <li class="copyright-footer__list">
+                Юр. лицо, которому принадлежит домен: ООО "Нижегородская
+                аптечная сеть"
+              </li>
+            </ul>
+          </div>
+          <div class="copyright-footer__right">
+            <a class="copyright-footer__app" href="" type="button"></a>
+            <a class="copyright-footer__app" href="" type="button"></a>
+          </div>
+        </section>
+        <section class="bottom-footer bloks">
+          <p class="bottom-footer__info">
+            Xарактеристики, описание, наличие и стоимость товаров не являются
+            публичной офертой, определяемой ст. 437(2) Гражданского кодекса РФ.
+            Цены на сайте могут отличаться от цен в аптеках и действуют только
+            при бронировании товаров с помощью сайта. Цены указаны с учётом всех
+            скидок. Google Play и логотип Google Play являются товарными знаками
+            корпорации Google LLC. App Store и логотип Apple являются товарными
+            знаками корпорации Apple Inc.
+          </p>
+          <p class="bottom-footer__text">Имеются противопоказания, проконсультируйтесь со специалистом</p>
+        </section>
+      </footer>
     </div>
+
     <!-- Подключение скриптов -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
     <script src="/vendor/bootstrap/js/jquery-3.2.1.slim.min.js"></script>

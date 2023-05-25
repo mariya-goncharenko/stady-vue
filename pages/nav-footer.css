@@ -1,0 +1,139 @@
+.nav-footer {
+  margin: 0 15px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  position: relative;
+}
+
+.nav-footer::before {
+  content: ""; /* создаём инлайн объект */
+  display: block; /* преобразуем его в блочный */
+  position: absolute; /* включаем асболютное позиционирование */
+  bottom: 0px; /*отступ будет 0 пикселей от верхней точки блока */
+  width: 100%; /* блок займёт по ширине 100% ширины родительского */
+  height: 1px; /* высота самого блока */
+  background: #ccc; /* задаём нужный цвет фоном */
+}
+
+.nav-footer__left {
+  margin: 0 0 40px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  column-gap: 70px;
+  flex-wrap: wrap;
+}
+
+.nav-footer__titel {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.nav-footer__lists {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.nav-footer__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: 275px;
+}
+
+.nav-footer__right {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.nav-footer__tel {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: right;
+}
+
+.nav-footer__day {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: right;
+}
+
+.nav-footer__webs {
+  width: 115px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav-footer__web {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+.nav-footer__web_tg {
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/iconTG.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.nav-footer__web_vk {
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/iconVkBlue.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.nav-footer__web_ok {
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/iconOk.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1180px) {
+  .nav-footer__right {
+    align-items: start;
+    margin: 0 0 30px;
+  }
+}
+
+@media screen and (max-width: 984px) {
+  .nav-footer__left {
+    margin: 0 0 30px;
+    justify-content: start;
+    row-gap: 30px;
+    margin: 0;
+  }
+
+  .nav-footer__tel {
+    text-align: left;
+  }
+
+  .nav-footer__day {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 792px) {
+  .nav-footer__list {
+    width: 260px;
+    column-gap: 30px;
+  }
+}

@@ -1,0 +1,20 @@
+.bottom-footer {
+    margin: 0 15px ;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-footer__info {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: rgba(48, 48, 48, 0.5);
+}
+
+.bottom-footer__text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  font-variant: all-small-caps;
+  color: rgba(48, 48, 48, 0.5);
+}
