@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="./vendor/normalize.css" />
     <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./pages/page.css" />
+    <link rel="stylesheet" href="./pages/dialog.css" />
+    <link rel="stylesheet" href="./pages/header-top.css" />
+    <link rel="stylesheet" href="./pages/header-midl.css" />
     <link rel="stylesheet" href="./pages/steps.css" />
     <link rel="stylesheet" href="./pages/title_content.css" />
     <link rel="stylesheet" href="./pages/recomendation.css" />
@@ -26,16 +29,50 @@
 
   <body class="root">
     <div class="page">
-      <header></header>
+      <header>
+        <div class="dialog" id="dialog">
+          <p class="dialog__text">
+            Строка для текстовых оповещений пользователей
+          </p>
+          <button @click="onClick" class="dialog__button" type="button"><img class="dialog__img" src="./img/iconCross.svg" alt=""></button>
+        </div>
+
+
+        <nav class="header-top" id="nav-top">
+          <ul class="header-top__left" v-for="item in links">
+            <li class="header-top__list">{{ item.name }}</li>
+          </ul>
+          <h3 class="nav-footer__tel">8 (831) 220-00-09</h3>
+          <p class="nav-footer__day">пн-пт 9.00-18.00</p>
+        </nav>
+    
+
+        <div class="header-midl">
+          <a href="#">
+            <img src="./img/iconLogo1.svg" alt="логотип">
+          </a>
+
+          <form class="header-midl__form"> 
+            <input class="header-midl__input" type="text" name="text" class="search" placeholder="Поиск по названию или веществу">
+            <input class="header-midl__btn" type="submit" name="submit" class="submit" value="Найти">
+          </form>
+
+
+        </div>
+        
+      </header>
+
       <main class="main">
+
+        <!--WORK AREA-->
+
+        <!-- Банеры главной страницы-->
         <section class="first-scrin">
           <div class="first-scrin__baner first-scrin__baner_big"></div>
           <div class="first-scrin__baner first-scrin__baner_min"></div>
           <div class="first-scrin__baner first-scrin__baner_min"></div>
         </section>
-
-        <section class="process bloks"></section>
-
+        <!-- Процесс -->
         <section class="steps bloks">
           <div class="steps__cantainer">
             <div class="steps__item">
@@ -78,7 +115,7 @@
             </div>
           </div>
         </section>
-
+        <!-- По полочкам -->
         <section class="shelves bloks" id="shelves">
           <div class="titel-content">
             <h2 class="titel-content__title">По полочкам</h2>
@@ -98,7 +135,7 @@
             </div>
           </div>
         </section>
-
+        <!-- Рекомендации -->
         <section class="recommendations bloks" id="recommendations">
           <div class="titel-content">
             <h2 class="titel-content__title">Рекомендуем</h2>
@@ -118,7 +155,7 @@
             </div>
           </div>
         </section>
-
+        <!-- Акции -->
         <section class="action bloks" id="action">
           <div class="titel-content">
             <h2 class="titel-content__title">Акции и распродажи</h2>
@@ -141,7 +178,7 @@
             </div>
           </div>
         </section>
-
+        <!-- Популярные категории -->
         <section class="popular bloks" id="popular">
           <div class="titel-content">
             <h2 class="titel-content__title">Популярные категории</h2>
@@ -182,7 +219,7 @@
             </nav>
           </div>
         </section>
-
+        <!-- Мобильное приложение -->
         <section class="app bloks">
           <div class="app__container">
             <div class="app__left">
@@ -204,7 +241,7 @@
             </div>
           </div>
         </section>
-
+        <!-- Новости о здоровье -->
         <section class="health bloks" id="popular">
           <div class="health__left">
             <div class="health__card-big">
@@ -259,7 +296,7 @@
             </div>
           </div>
         </section>
-
+        <!-- Текстовый блок -->
         <section class="text-blok bloks">
           <h2 class="text-blok__title">
             Сеть аптек «Farmani» - Нижний Новгород
@@ -342,8 +379,33 @@
         </section>
       </main>
 
+
+      <!-- -->
       <footer>
-        <section class="email-blok bloks"></section>
+        <!-- Почтовая рассылка-->
+        <section class="email-blok bloks">
+          <section class="app bloks">
+            <div class="app__container">
+              <div class="app__left">
+                <h2 class="app__title">Только для своих!</h2>
+                <p class="app__subtitle">
+                  Пришлём вам лучшие предложения, расскажем про акции. Статьи о красоте и здоровье от наших авторов.
+                </p>
+                <div>
+                  <form class="header-midl__form"> 
+                    <input class="header-midl__input" type="text" name="text" class="search" placeholder="Напишите ваш e-mail">
+                    <input class="header-midl__btn" type="submit" name="submit" class="submit" value="Подписаться">
+                  </form>
+                </div>
+              </div>
+  
+              <div class="app__right">
+                <img class="app__img" src="./img/imgEnvelope.png" alt="" />
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- Блок навигации -->
         <section class="nav-footer bloks" id="nav-footer">
           <div class="nav-footer__left">
             <nav class="nav-footer__navigate">
@@ -382,6 +444,7 @@
             <div>
           </div>
         </section>
+        <!-- Копирайт и информация о Юр.лице-->
         <section class="copyright-footer bloks">
           <div class="copyright-footer__left">
             <ul class="copyright-footer__lists">
@@ -403,6 +466,7 @@
             <a class="copyright-footer__app" href="" type="button"></a>
           </div>
         </section>
+        <!-- Дополнительная информация-->
         <section class="bottom-footer bloks">
           <p class="bottom-footer__info">
             Xарактеристики, описание, наличие и стоимость товаров не являются

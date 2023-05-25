@@ -1,0 +1,38 @@
+.dialog {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 48px;
+    position: relative;
+  background: #2EAC78;
+}
+
+.none {
+    display: none;
+}
+
+.dialog__text {
+  margin: 0;
+  padding: 15px 0 0;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.dialog__button {
+    margin: 0;
+    padding: 0;
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    background-color: transparent;
+    border-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

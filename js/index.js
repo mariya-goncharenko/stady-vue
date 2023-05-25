@@ -1,4 +1,27 @@
-var navHeaderTop = new Vue({
+
+  var dialog = new Vue({
+    el: '#dialog',
+    methods: {
+      onClick() {
+        document.getElementById('dialog').classList.toggle('none');
+      },
+    },
+  });
+
+  var navHeader = new Vue({
+    el: "#nav-top",
+    data: {
+      links: [
+        { name: "Нижний Новгород", id: "1" },
+        { name: "О компании", id: "2" },
+        { name: "Доставка", id: "3" },
+        { name: "Контакты", id: "4" },
+        { name: "Аптеки", id: "5" },
+        { name: "Бонусная программа", id: "6" },
+      ],
+    }});
+
+  var navHeaderTop = new Vue({
   el: "#popular",
   data: {
     supplements: [

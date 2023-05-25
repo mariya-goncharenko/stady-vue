@@ -1,0 +1,36 @@
+.header-midl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 15px;
+    padding: 0;
+}
+
+.header-midl__input {
+    background: #FFFFFF;
+    border: 1px solid #CBCBCC;
+    border-radius: 6px;
+    margin: 0;
+    padding: 5px;
+    width: 400px;
+}
+
+.header-midl__btn {
+    background: #2EAC78;
+    border-radius: 0px 4px 4px 0px;
+    border-color: transparent;
+    margin: 0 0 0 -7px;
+    padding: 4px;
+}
+
+@media screen and (max-width: 690px) {
+    .header-midl__input {
+        display: none;
+    }
+    
+    .header-midl__btn {
+        display: none;
+    }
+}
