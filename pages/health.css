@@ -9,7 +9,6 @@
 .health__card-big {
   max-width: 630px;
   height: auto;
-  background-image: ;
   display: flex;
 }
 
@@ -113,12 +112,6 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
-  }
-}
-
-@media screen and (max-width: 880px) {
-  .app__img {
-    max-width: 220px;
   }
 }
 
